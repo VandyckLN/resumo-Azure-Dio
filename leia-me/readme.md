@@ -1,7 +1,5 @@
 # 🚀 Criando Máquinas Virtuais no Azure: Guia Prático
 
-![Azure Virtual Machines](https://raw.githubusercontent.com/microsoft/azuredatastudio/main/src/sql/media/microsoft_azure_default.svg)
-
 Este guia é um passo a passo detalhado sobre como criar máquinas virtuais (VMs) no Microsoft Azure, pensado para ser útil para quem busca entender o processo e replicá-lo. Vamos cobrir tudo, desde a escolha da região ideal até as práticas de segurança, backup e gestão de custos.
 
 ## 📋 Índice
@@ -32,20 +30,14 @@ Para começar, você precisará de:
 1. Abra seu navegador e acesse o [Portal do Azure](https://portal.azure.com).
 2. Faça login com suas credenciais da conta Azure.
 
-![Portal do Azure](https://learn.microsoft.com/pt-br/azure/azure-portal/media/azure-portal-overview/azure-portal-home.png)
-
 ## 🆕 Iniciando a Criação da Máquina Virtual
 
 1. No menu de navegação esquerdo, clique em "Máquinas Virtuais".
 2. Na barra superior, clique em "+ Criar" e selecione "Máquina virtual".
 
-![Criação de VM](https://learn.microsoft.com/pt-br/azure/virtual-machines/media/quick-create-portal/create-virtual-machine.png)
-
 ## 💻 Guia "Noções básicas"
 
 Nesta seção, você configurará os detalhes essenciais da sua VM:
-
-![Noções básicas](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/basic-tab.png)
 
 ### Assinatura
 
@@ -81,15 +73,11 @@ Mantenha como "Standard" na maioria dos casos.
 
 Selecione o sistema operacional da sua VM (ex: Windows Server 2022 Datacenter ou Ubuntu Server 22.04 LTS).
 
-![Seleção de imagem](https://learn.microsoft.com/pt-br/azure/virtual-machines/media/quick-create-portal/select-image.png)
-
 ### Tamanho
 
 - Escolha o tamanho da VM com base nos requisitos de CPU, memória, armazenamento e rede da sua aplicação.
 - O Azure oferece diversas séries de tamanhos (ex: B-series para burst, D-series para uso geral, E-series para memória otimizada).
 - Observe o custo mensal estimado exibido ao lado do tamanho.
-
-![Tamanhos de VM](https://learn.microsoft.com/pt-br/azure/virtual-machines/media/quick-create-portal/select-size.png)
 
 ### Conta de administrador
 
@@ -106,8 +94,6 @@ Clique em "Avançar: Discos >".
 ## 💾 Guia "Discos"
 
 Configure o disco do sistema operacional e, se necessário, adicione discos de dados:
-
-![Configuração de discos](https://learn.microsoft.com/pt-br/azure/virtual-machines/media/quick-create-portal/disk-options.png)
 
 ### Tipo de disco do sistema operacional:
 
@@ -128,8 +114,6 @@ Clique em "Avançar: Rede >".
 ## 🌐 Guia "Rede"
 
 Defina as configurações de rede da sua VM:
-
-![Configuração de rede](https://learn.microsoft.com/pt-br/azure/virtual-machines/media/quick-create-portal/networking-tab.png)
 
 ### Rede virtual
 
@@ -158,8 +142,6 @@ Clique em "Avançar: Gerenciamento >".
 
 Nesta seção, você configurará opções de monitoramento, automação e backup:
 
-![Gerenciamento da VM](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/management.png)
-
 ### Diagnóstico de inicialização
 
 Ative para auxiliar na solução de problemas de inicialização da VM.
@@ -185,8 +167,6 @@ Clique em "Avançar: Monitoramento >".
 
 Configure o monitoramento básico para sua VM:
 
-![Monitoramento](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/monitoring.png)
-
 ### Métricas de convidado do SO
 
 Habilite para coletar métricas de desempenho do sistema operacional dentro da VM.
@@ -203,8 +183,6 @@ Esta seção permite configurar extensões, dados personalizados e outras opçõ
 
 As tags são pares de nome/valor usados para categorizar seus recursos.
 
-![Tags no Azure](https://learn.microsoft.com/pt-br/azure/azure-resource-manager/management/media/tag-resources/resource-group-tagging.png)
-
 **Exemplos**: `Ambiente: Producao`, `Projeto: WebApp`, `Responsavel: EquipeDev`.
 
 **Benefícios**: Facilitam a organização, o gerenciamento de custos (filtrando custos por tags), a automação e a aplicação de políticas.
@@ -212,8 +190,6 @@ As tags são pares de nome/valor usados para categorizar seus recursos.
 ## 🔍 Guia "Examinar + Criar"
 
 Revise todas as configurações da sua VM.
-
-![Examinar e criar](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/review-create.png)
 
 - O Azure executará uma validação para garantir que as configurações são válidas. Corrija quaisquer erros antes de prosseguir.
 - Observe o custo estimado mensal na parte inferior.
@@ -227,8 +203,6 @@ Após a implantação, você pode se conectar à sua VM:
 - **Para VMs Windows**: Use um cliente RDP (Conexão de Área de Trabalho Remota) e o IP público da VM.
 - **Para VMs Linux**: Use um cliente SSH (ex: PuTTY ou terminal) e o IP público da VM.
 
-![Conexão RDP](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/connect-rdp.png)
-
 ## ⚠️ Considerações Importantes
 
 ### Segurança
@@ -239,8 +213,6 @@ Após a implantação, você pode se conectar à sua VM:
 - Mantenha o sistema operacional e as aplicações da VM atualizados com os patches de segurança mais recentes.
 - Implemente um antivírus/antimalware dentro da VM.
 - Utilize o Azure Security Center para recomendações de segurança e monitoramento contínuo.
-
-![Segurança no Azure](https://learn.microsoft.com/pt-br/azure/security-center/media/security-center-introduction/security-center-dashboard.png)
 
 ### Disponibilidade
 
@@ -263,8 +235,6 @@ Após a implantação, você pode se conectar à sua VM:
 ---
 
 Este guia serve como um ponto de partida para a criação de VMs no Azure. Adapte as configurações às suas necessidades específicas de aplicação e negócios. Sinta-se à vontade para contribuir com sugestões ou melhorias!
-
-![Azure Architecture](https://learn.microsoft.com/pt-br/azure/architecture/reference-architectures/n-tier/images/n-tier-sql-server.png)
 
 ## 📚 Recursos Adicionais
 
